@@ -1,0 +1,413 @@
+/* LOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADERLOADER LOADER */
+
+.loader_bg{
+    position: fixed;
+    z-index: 999999;
+    background: navy;
+    width: 100%;
+    height: 100%;
+}
+.loader{
+    border: 0 soild transparent;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: calc(50vh - 75px);
+    left: calc(50vw - 75px);
+}
+.loader:before, .loader:after{
+    content: '';
+    border: 1em solid #00ce90;
+    border-radius: 50%;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: loader 3s linear infinite;
+    opacity: 0;
+}
+.loader:before{
+    animation-delay: .5s;
+}
+@keyframes loader{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+/* NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR  NAVIGATION BAR */
+
+body {
+	margin: 0;
+	padding: 0;
+    background: linear-gradient(180deg, #000000, #090a79, #0032ff, #00ce90);
+    background-size: 100% 150%;
+    animation: gradient 0.9s ease infinite;
+    Font-family: Century Gothic;
+}
+
+.logo:hover {
+    Font-family: Century Gothic;
+  opacity: 0.8;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+ 
+    50% {
+        background-position: 100% 50%;
+    }
+ 
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+nav {
+  Font-family: Century Gothic;
+  border-radius: 25px;
+  border: 3px solid #00ce90;
+  background: navy;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+    Font-family: Century Gothic;
+  width: 100px;
+  height: 100px;
+}
+
+ul.main-menu {
+    Font-family: Century Gothic;
+  list-style: none;
+  display: flex;
+}
+
+ul.main-menu li {
+    Font-family: Century Gothic;
+  margin: 0 10px;
+}
+
+ul.main-menu li a {
+    Font-family: Century Gothic;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  transition: background-color 0.5s ease-out, color 0.5s ease-out;
+  padding: 20px;
+}
+
+ul.main-menu li a:hover {
+    Font-family: Century Gothic;
+    background-color: lightgrey;
+    color: navy;
+}
+
+.hamburger-menu {
+    Font-family: Century Gothic;
+  width: 30px;
+  height: 20px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.hamburger-menu:hover{
+    Font-family: Century Gothic;
+  opacity: 0.8;
+}
+
+.hamburger-menu .line {
+    Font-family: Century Gothic;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+}
+
+@media (max-width: 2000px) {
+  .main-menu {
+    display: none;
+  }
+  .hamburger-menu {
+    display: flex;
+  }
+  .dropdown-menu {
+    list-style: none;
+    display: none;
+    flex-direction: column;
+  }
+  .dropdown-menu.active {
+    display: block;
+}
+}
+
+.textbox {
+    Font-family: Century Gothic;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.5s ease-out;
+  border: 3px solid white;
+  display: block;
+  cursor: pointer;
+}
+
+.textbox:hover {
+    Font-family: Century Gothic;
+  background-color: lightgrey;
+}
+
+.stylish-text {
+    Font-family: Century Gothic;
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-family: Century Gothic;
+  font-size: 24px;
+  color: white;
+  transition: color 0.5s;
+  cursor: pointer;
+}
+
+.stylish-text:hover {
+    Font-family: Century Gothic;
+  color: navy;
+}
+
+/* CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT   CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT  CONTENT CONTENT */
+
+.heading h2 {
+    Font-family: Century Gothic;
+  font-size: 50px;
+  font-weight: 600;
+  background: rgb(255,241,0);
+  background: -moz-linear-gradient(90deg, rgba(255,241,0,1) 0%, rgba(0,255,156,1) 50%, rgba(0,221,255,1) 100%);
+  background: -webkit-linear-gradient(90deg, rgba(255,241,0,1) 0%, rgba(0,255,156,1) 50%, rgba(0,221,255,1) 100%);
+  background: linear-gradient(90deg, rgba(255,241,0,1) 0%, rgba(0,255,156,1) 50%, rgba(0,221,255,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fff100",endColorstr="#00ddff",GradientType=1);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.card {
+    Font-family: Century Gothic;
+  background-color: #FFBF00;
+  box-shadow: 0 16px 16px 16px rgba(0, 255, 255, 0.6);
+  max-width: 315px;
+  margin: auto;
+  text-align: center;
+  font-family: Century Gothic;
+}
+
+.card p {
+  padding: 5px;
+  font-family: Century Gothic;
+}
+
+.title {
+    Font-family: Century Gothic;
+  color: grey;
+  font-size: 18px;
+}
+
+.contact {
+    Font-family: Century Gothic;
+  margin: auto;
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 0;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  max-width: 315px;
+  font-size: 18px;
+}
+
+.textbox1 {
+    Font-family: Century Gothic;
+  font-color: black;
+  background-color: #FFBF00;
+  color: white;
+  padding: 20px;
+  border: 3px solid #00CE90;
+  border-radius: 30px;
+}
+
+.textbox1 h2 {
+    Font-family: Century Gothic;
+  font-size: 24px;
+  text-align: center;
+}
+
+table {
+    Font-family: Century Gothic;
+   border-collapse:separate;
+   border-spacing: 30px;
+}
+
+.a1:hover {
+	text-decoration: underline;
+	color: blue;
+}
+
+.a2:hover {
+	text-decoration: underline;
+	color: blue;
+}
+
+.a3:hover {
+	text-decoration: underline;
+	color: blue;
+}
+
+.a4:hover {
+	text-decoration: underline;
+	color: blue;
+}
+
+.a5:hover {
+	text-decoration: underline;
+	color: blue;
+}
+
+.a6:hover {
+	text-decoration: underline;
+	color: blue;
+}
+
+/* FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  FOOTER FOOTER  */
+
+
+footer {
+    Font-family: Century Gothic;
+  Margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+#page-container {
+    Font-family: Century Gothic;
+  position: relative;
+  min-height: 0vh; /* Remember to set back to 100 viewport height in case jammed */
+}
+
+#content-wrap {
+    Font-family: Century Gothic;
+  padding-bottom: 2.5rem;   
+}
+
+#footer {
+    Font-family: Century Gothic;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;           
+}
+
+.container {
+    Font-family: Century Gothic;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+    Font-family: Century Gothic;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.col-md-4 {
+    Font-family: Century Gothic;
+  width: 33.3333%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+h3 {
+    Font-family: Century Gothic;
+  margin-bottom: 10px;
+}
+
+form input[type="email"] {
+    Font-family: Century Gothic;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid;
+  border-radius: 4px;
+}
+
+form button {
+    Font-family: Century Gothic;
+  padding: 10px 20px;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+p {
+    Font-family: Century Gothic;
+  margin-bottom: 10px;
+}
+
+a {
+    Font-family: Century Gothic;
+  color: #00CE90;
+}
+
+a:hover {
+    Font-family: Century Gothic;
+  text-decoration: underline;
+}
+
+.container {
+    Font-family: Century Gothic;
+  padding: 5px;
+}
+
+input[type=text], input[type=submit] {
+    Font-family: Century Gothic;
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid;
+  box-sizing: border-box;
+}
+
+input[type=checkbox] {
+    Font-family: Century Gothic;
+  margin-top: 16px;
+}
+
+input[type=submit] {
+    Font-family: Century Gothic;
+  background-color: #04AA6D;
+  color: white;
+  border: none;
+}
+
+input[type=submit]:hover {
+    Font-family: Century Gothic;
+  opacity: 0.8;
+}
